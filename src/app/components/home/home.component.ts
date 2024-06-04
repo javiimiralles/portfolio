@@ -7,7 +7,6 @@ import { LinkedInIconComponent } from '../../icons/linkedin-icon.component';
   standalone: true,
   imports: [GitHubIconComponent, LinkedInIconComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
 })
 export class HomeComponent {
 

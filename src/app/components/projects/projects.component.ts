@@ -11,15 +11,14 @@ import { Router } from '@angular/router';
   selector: 'app-projects',
   standalone: true,
   imports: [AngularIconComponent, IonicIconComponent, NodeJsIconComponent, MongoDBIconComponent, ArrowUpSquareIconComponent, ThreeJsIconComponent],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  templateUrl: './projects.component.html'
 })
 export class ProjectsComponent {
 
   constructor(private router: Router) {}
 
-  navigate(url: string) {
-    this.router.navigateByUrl(url);
+  showProjectDetails(projectIndex: number) {
+    this.router.navigate(['/gallery'], { queryParams: { projectIndex } })
   }
 
 }

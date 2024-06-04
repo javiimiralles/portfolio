@@ -1,7 +1,7 @@
 <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-white pb-4">Proyectos</h1>
 <div class="flex justify-center">
   <div class="max-w-screen-xl grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 text-center mx-auto p-2 dark:text-white">
-    <div class="flex flex-col rounded-lg justify-between w-full md:w-96 h-96 bg-white bg-center text-gray-800 shadow-lg shadow-gray-500 dark:shadow-sm overflow-hidden cursor-pointer" style="background-image:url('../../../assets/logo_tech4diet.png')">
+    <div (click)="showProjectDetails(0)" class="flex flex-col rounded-lg justify-between w-full md:w-96 h-96 bg-white bg-center text-gray-800 shadow-lg shadow-gray-500 dark:shadow-sm overflow-hidden cursor-pointer hover:scale-105 transition-transform" style="background-image:url('../../../assets/logo_tech4diet.png')">
       <div class="flex justify-between items-center ml-4 mt-4">
         <div class="flex space-x-2 items-center">
           <span title="Ionic" class="size-6">
@@ -22,11 +22,11 @@
           </span>
         </div>
         <div class="flex space-x-2 items-center me-2">
-          <a href="https://github.com/javiimiralles/tech4diet_app_client" target="_blank" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
+          <a href="https://github.com/javiimiralles/tech4diet_app_client" (click)="$event.stopPropagation()" target="_blank" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
             <app-arrow-up-square-icon class="size-4"></app-arrow-up-square-icon>
             <span class="ml-2">GitHub</span>
           </a>
-          <a class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
+          <a (click)="showProjectDetails(0)" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
             <app-arrow-up-square-icon class="size-4"></app-arrow-up-square-icon>
             <span class="ml-2">Detalles</span>
           </a>
@@ -40,7 +40,7 @@
           y parte del proyecto de investigación Tech4Diet.</p>
       </div>
     </div>
-    <div class="flex flex-col rounded-lg justify-between w-full md:w-96 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer" style="background-image:url('../../../assets/logo_ff.png')">
+    <div (click)="showProjectDetails(1)" class="flex flex-col rounded-lg justify-between w-full md:w-96 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer hover:scale-105 transition-transform" style="background-image:url('../../../assets/logo_ff.png')">
       <div class="flex justify-between items-center ml-4 mt-4">
         <div class="flex space-x-2 items-center">
           <span title="Ionic" class="size-6">
@@ -65,9 +65,13 @@
           </span>
         </div>
         <div class="flex space-x-2 items-center me-2">
-          <a href="https://fitnessforce.ovh/" target="_blank" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
+          <a href="https://fitnessforce.ovh/" (click)="$event.stopPropagation()" target="_blank" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
             <app-arrow-up-square-icon class="size-4"></app-arrow-up-square-icon>
             <span class="ml-2">Ir a la app</span>
+          </a>
+          <a (click)="showProjectDetails(1)" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
+            <app-arrow-up-square-icon class="size-4"></app-arrow-up-square-icon>
+            <span class="ml-2">Detalles</span>
           </a>
         </div>
       </div>
@@ -79,7 +83,7 @@
         </p>
       </div>
     </div>
-    <div class="flex flex-col rounded-lg justify-between w-full md:w-96 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer" style="background-image:url('../../../assets/captura_jfitness.png')">
+    <div (click)="showProjectDetails(2)" class="flex flex-col rounded-lg justify-between w-full md:w-96 h-96 bg-white bg-center text-gray-800 shadow-md overflow-hidden cursor-pointer hover:scale-105 transition-transform" style="background-image:url('../../../assets/captura_jfitness.png')">
       <div class="flex justify-between items-center ml-4 mt-4">
         <div class="flex space-x-2 items-center">
           <span title="Ionic" class="size-6">
@@ -100,11 +104,11 @@
           </span>
         </div>
         <div class="flex space-x-2 items-center me-2">
-          <a href="https://github.com/javiimiralles/gym_app_client" target="_blank" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
+          <a href="https://github.com/javiimiralles/gym_app_client" (click)="$event.stopPropagation()" target="_blank" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
             <app-arrow-up-square-icon class="size-4"></app-arrow-up-square-icon>
             <span class="ml-2">GitHub</span>
           </a>
-          <a class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
+          <a (click)="showProjectDetails(2)" class="flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-xs px-3 py-2 text-center">
             <app-arrow-up-square-icon class="size-4"></app-arrow-up-square-icon>
             <span class="ml-2">Detalles</span>
           </a>

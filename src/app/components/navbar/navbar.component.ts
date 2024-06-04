@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DownloadIconComponent } from '../../icons/download-icon.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [DownloadIconComponent],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  imports: [DownloadIconComponent, CommonModule],
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent implements OnInit {
+
+  @Input() showBackButton: boolean = false;
 
   isDarkMode = false;
   darkIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

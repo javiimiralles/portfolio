@@ -6,8 +6,7 @@ import { LinkedInIconComponent } from '../../icons/linkedin-icon.component';
   selector: 'app-contact',
   standalone: true,
   imports: [GitHubIconComponent, LinkedInIconComponent],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  templateUrl: './contact.component.html'
 })
 export class ContactComponent {
 
