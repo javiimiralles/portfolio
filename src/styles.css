@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  color-scheme: light dark;
+  --icon-fill-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dark {
+  --icon-fill-color: #ffffff;
+}
