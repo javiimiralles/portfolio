@@ -18,7 +18,6 @@ import { SkillsComponent } from '../../components/skills/skills.component';
     ContactComponent,
   ],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent {
 
